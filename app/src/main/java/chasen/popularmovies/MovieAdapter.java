@@ -19,18 +19,18 @@ import butterknife.ButterKnife;
 public class MovieAdapter extends BaseAdapter {
 
     private final Context mContext;
-    private final List<Movie> movies;
+    private final List<Movie> mMovies;
 
     @BindView(R.id.movie_image)
     ImageView moviePicture;
 
     public MovieAdapter(Context context, List<Movie> movies) {
         mContext = context;
-        this.movies = movies;
+        mMovies = movies;
     }
     @Override
     public int getCount() {
-        return movies.size();
+        return mMovies.size();
     }
 
     @Override
@@ -53,7 +53,9 @@ public class MovieAdapter extends BaseAdapter {
 
         ButterKnife.bind(view);
 
-        moviePicture
+        moviePicture.setImageResource(mMovies.get(i).getMoviePoster());
+
+        return view;
 
     }
 }
