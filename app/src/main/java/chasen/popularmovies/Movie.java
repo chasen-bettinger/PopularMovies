@@ -1,25 +1,24 @@
 package chasen.popularmovies;
 
-import org.parceler.Parcel;
 
 /**
  * Created by Chasen on 1/20/2017.
  */
 
-@Parcel
+
 public class Movie {
 
-    private int moviePoster;
+    private String moviePoster;
 
     public Movie() {
 
     }
 
-    public Movie(int moviePoster) {
+    public Movie(String moviePoster) {
         this.moviePoster = moviePoster;
     }
 
-    public int getMoviePoster() {
+    public String getMoviePoster() {
         return moviePoster;
     }
 }
